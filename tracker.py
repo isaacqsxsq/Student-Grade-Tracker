@@ -73,7 +73,7 @@ def view_student(name):
             avg_list.append(temp)
             average[0] = average[0] | {field: temp}
         final = compute_final(avg_list, weights)
-        average[0] = average[0] | {'final': final}
+        average[0] = average[0] | {'Total': final}
         print(tabulate(ans + average, headers= "keys", tablefmt="rounded_outline"))
 def view_students(): 
     #TODO valid print with different data
@@ -101,7 +101,7 @@ def view_students():
                 average[0] = average[0] | {field: temp}
             final = compute_final(avg_list, weights)
             ans.append(row)
-            ans.append(average[0] | {'final': final})
+            ans.append(average[0] | {'Total': final})
         print(tabulate(ans, headers= "keys", tablefmt="rounded_outline"))
 def add_student():
     #TODO add default value corretly
